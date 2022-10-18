@@ -61,13 +61,6 @@ namespace MyHardware.Controllers
             return Ok(TempData);
         }
 
-        [HttpGet("getinvitedialog")]
-        [ValidateAntiForgeryToken]
-        public IActionResult GetInviteDialog()
-        {
-            return PartialView("_InviteCustomerPartial");
-        }
-
         #region -------- Private Methods ----------
         private void Validate(SupplierViewModel model)
         {

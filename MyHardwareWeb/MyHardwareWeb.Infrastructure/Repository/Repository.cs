@@ -41,6 +41,7 @@ namespace MyHardwareWeb.Infrastructure.Repository
         public virtual async Task<List<TEntity>> GetAll()
         {
             List<TEntity> currentEntity = await _dbSet.ToListAsync();
+            currentEntity = currentEntity == null ? new List<TEntity>() : currentEntity;
             return currentEntity;
         }
 
