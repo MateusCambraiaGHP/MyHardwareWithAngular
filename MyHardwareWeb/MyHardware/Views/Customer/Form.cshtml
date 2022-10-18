@@ -1,0 +1,27 @@
+﻿@model MyHardware.ViewModel.CustomerViewModel
+
+<form method="post">
+  <div class="border p-3 mt-4">
+    <div class="row pb-2">
+      <h2 class="text-primary">Criar Produto</h2>
+    </div>
+    <div class="mb-3">
+      <label asp-for="Name">Nome</label>
+      <input asp-for="Name" required placeholder="Digite o nome do fornecedor" class="form-control" />
+      <span asp-validation-for="Name" class="text-danger"></span>
+    </div>
+    <div class="mb-3">
+      <label asp-for="Description">Descrição do Produto</label>
+      <textarea asp-for="Description" required placeholder="Informe a descrição do produto." class="form-control"></textarea>
+      <span asp-validation-for="Description" class="text-danger"></span>
+    </div>
+    <button type="submit" class="btn btn-primary" style="width:150px">Criar</button>
+    <a asp-controller="Product" asp-action="Index" class="btn btn-secondary" style="width:150px">Voltar a Lista</a>
+  </div>
+</form>
+@section Scripts{
+  @{
+    <partial name="_Notification" />
+    <partial name="_ValidationScriptsPartial" />
+  }
+  }

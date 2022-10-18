@@ -1,0 +1,44 @@
+﻿@model MyHardware.ViewModel.EmailViewModel
+
+<div class="modal fade">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Convidar Cliente</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true"></span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form id="register-user-form">
+          <div class="row">
+            <div class="form-group required">
+              <label class="width-100">Nome do cliente:</label>
+              <input asp-for="NameClient" class="form-control" autofocus autocomplete="off" maxlength="60" placeholder="Nome do cliente" required>
+            </div>
+          </div>
+          <div class="row">
+            <div class="form-group">
+              <label class="col-form-label">Email do cliente:</label>
+              <input type="text" class="form-control" asp-for="To" placeholder="Informe seu email">
+            </div>
+          </div>
+          <div class="row">
+            <div class="form-group">
+              <label class="col-form-label">Token:</label>
+              <input type="password" class="form-control" asp-for="Token" placeholder="Informe o token" readonly>
+              <div class="text-end mt-2">
+                <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked">
+                <label class="form-check-label" for="flexCheckChecked">Personalizar Token?</label>
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="submit" class="btn btn-primary">Convidar</button>
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+      </div>
+    </div>
+  </div>
+</div>

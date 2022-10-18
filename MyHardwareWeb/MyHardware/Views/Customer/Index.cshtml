@@ -1,0 +1,40 @@
+﻿@model IEnumerable<MyHardware.ViewModel.CustomerViewModel>
+@{
+  ViewData["Title"] = "Clientes";
+}
+
+<div class="container p-3">
+  <div class="row pt-4">
+    <div class="col-6">
+      <h2 class="text-primary text-danger">Lista de Clientes</h2>
+    </div>
+    <div class="col-6 text-end">
+    </div>
+    <div>
+      <img src="~/lib/img/spinner.gif" alt="Spinner" id="spinner" class="align-content-center">
+      <p id="erro">Ocorreu um erro, por favor tente novamente</p>
+    </div>
+    <div>
+      <a asp-controller="Product" asp-action="Create" class="btn btn-outline-primary bg-danger"><i class="bi bi-plus-circle"></i> &nbsp; Criar Novo Cliente</a>
+      <button type="button" id="botao-exportar" class="btn btn-outline-success mt-4">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-download" viewBox="0 0 16 16">
+          <path d="M.5 9.9a.5.5 0 0 1 .5.5v2.5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2.5a.5.5 0 0 1 1 0v2.5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-2.5a.5.5 0 0 1 .5-.5z" />
+          <path d="M7.646 11.854a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V1.5a.5.5 0 0 0-1 0v8.793L5.354 8.146a.5.5 0 1 0-.708.708l3 3z" />
+        </svg> Exportar
+      </button>
+    </div>
+    <br /><br />
+    <table class="table table-bordered table-striped" style="width:100%">
+      <thead>
+        <tr>
+          <th>Nome</th>
+          <th>Quantidade</th>
+          <th>Preço</th>
+          <th>Descrição</th>
+        </tr>
+      </thead>
+      <tbody id="tabela-produtos">
+      </tbody>
+    </table>
+  </div>
+</div>

@@ -1,0 +1,4 @@
+C:\GitHubRepos\MyHardware\MyHardwareWeb\MyHardware.WebUI\obj\Debug\MyHardware.WebUI.esproj.SuggestedBindingRedirects.cache
+C:\GitHubRepos\MyHardware\MyHardwareWeb\MyHardware.WebUI\obj\Debug\MyHardware.WebUI.esproj.CoreCompileInputs.cache
+C:\GitHubRepos\MyHardwareWithAngular\MyHardwareWeb\MyHardware.WebUI\obj\Debug\MyHardware.WebUI.esproj.SuggestedBindingRedirects.cache
+C:\GitHubRepos\MyHardwareWithAngular\MyHardwareWeb\MyHardware.WebUI\obj\Debug\MyHardware.WebUI.esproj.CoreCompileInputs.cache
